@@ -4,7 +4,7 @@ const connection = require("../config/connection.js");
 // Object for all our SQL statement functions.
 const orm = {
   all: function(cb) {
-    const queryString = "SELECT * FROM burgers";";
+    const queryString = "SELECT * FROM burgers";
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
