@@ -7,7 +7,7 @@ var burger = {
     });
   },
   newBurg: function(burgName, cb) {
-    orm.insert(burgName, function(res) {
+    orm.newBurg(burgName, function(res) {
       cb(res);
     })
   }
