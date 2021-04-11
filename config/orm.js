@@ -14,7 +14,7 @@ var orm = {
     });
   },
   newBurg: function(burgName, cb) {
-    var queryString = `INSERT INTO burgers (burger_name, devoured) VALUES (${burgName}, false)`;
+    var queryString = `INSERT INTO burgers (burger_name, devoured) VALUES ("${burgName}", false)`;
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
