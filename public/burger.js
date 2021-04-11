@@ -1,5 +1,5 @@
 $(function() {
-	$(".submit").on("click", function(e) {
+	$(".submit").on("submit", function(e) {
 		e.preventDefault();
 		var burgName = $("#input").val().trim();
 		console.log(burgName);
