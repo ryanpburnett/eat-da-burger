@@ -6,6 +6,11 @@ var burger = {
       cb(res);
     });
   },
+  newBurg: function(burgName, cb) {
+    orm.insert(burgName, function(res) {
+      cb(res);
+    })
+  }
 };
 
 // Export the database functions for the controller (burgerController.js).
