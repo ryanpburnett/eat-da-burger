@@ -2,9 +2,9 @@
 const connection = require("../config/connection.js");
 
 // Object for all our SQL statement functions.
-const orm = {
+var orm = {
   all: function(cb) {
-    const queryString = "SELECT * FROM burgers";
+    var queryString = "SELECT * FROM burgers";
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
@@ -15,5 +15,5 @@ const orm = {
   },
 };
 
-// Export the orm object for the model (cat.js).
+// Export the orm object for the model (burger.js).
 module.exports = orm;
