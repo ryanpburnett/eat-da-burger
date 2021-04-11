@@ -9,7 +9,7 @@
     <form>
         <div class="mb-3">
             <label for="input" class="form-label">What burger do you want to eat?</label>
-            <input type="input" class="form-control" id="input" aria-describedby="input">
+            <input type="input" class="form-control submit" id="input" aria-describedby="input">
         </div>
     </form>
 </div>
@@ -26,10 +26,19 @@
 
 <div class="row">
     <div class="col-6">
+        {{#each burgers}}
+        {{#unless eaten}}
         <p class="wannaEat burgerBox">text</p>
+        <button id="{{this.id}}">Eat!</button>
+        {{/unless}}
+        {{/each}}
     </div>
 
     <div class="col-6">
+        {{#each burgers}}
+        {{#if eaten}}
         <p class="eaten burgerBox">text</p>
+        {{/if}}
+        {{/each}}
     </div>
 <div/>
