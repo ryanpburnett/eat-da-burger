@@ -12,7 +12,7 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function(req, res) {
-  burger.insert(req.body.burgName, function(data) {
+  burger.newBurg(req.body.burgName, function(data) {
     res.json({ id: data.insertId });
   });
 });
