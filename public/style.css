@@ -1,0 +1,15 @@
+.iconLeft {
+    float: left;
+}
+
+.iconRight {
+    float: right;
+}
+
+.heading {
+    background-color: firebrick;
+    padding: 40px;
+    text-align: center;
+    font-size: 60px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
