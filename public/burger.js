@@ -1,7 +1,7 @@
 $(function() {
-	$(".submit").on("submit", function(e) {
+	$("#submit").on("submit", function(e) {
 		e.preventDefault();
-		var burgName = $("#input").val().trim();
+		var burgName = $("#text").val().trim();
         $.ajax("/api/burgers", {
         type: "POST",
         data: {
