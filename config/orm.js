@@ -28,13 +28,13 @@ var orm = {
   updateOne: function (burgStatus, burgId, cb) {
     var queryString = `UPDATE burgers SET devoured = "${burgStatus}" WHERE id = ${burgId}`;
     connection.query(queryString, function (err, result) {
-        if (err) {
-          throw err;
-        }
-        console.log("success-updateOne-function");
-        cb(result);
+      if (err) {
+        throw err;
+      }
+      console.log("success-updateOne-function");
+      cb(result);
     });
-}
+  }
 };
 
 // Export the orm object for the model (burger.js).
