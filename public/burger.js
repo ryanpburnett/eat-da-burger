@@ -10,6 +10,18 @@ $(function() {
         }).then(function(res) {
             location.reload();
         });
-		
+    });	
+
+    $(".eatIt").on("click", function() {
+        var id = $(this).data("id");
+        $.ajax("/api/burgers/" + id, {
+            method: "PUT",
+            data: {
+            devoured: true
+        }
+        }).then(function() {
+        location.reload();
+        });
+        
 	});
 });
