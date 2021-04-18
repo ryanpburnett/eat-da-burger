@@ -3,44 +3,46 @@
     <img class="iconRight" src="./burger.gif">
     <p>Eat-Da-Burger!</p>
 </div>
-<br>
-<br>
-<div class="container inputDiv">
-    <form>
-        <div class="mb-3">
-            <label for="input" class="form-label">What burger do you want to eat?</label>
-            <input type="input" class="form-control submit" id="text" aria-describedby="input">
-            <br>
-            <button id="submit">Submit</button>
+<div id="main">
+    <br>
+    <br>
+    <div class="container inputDiv">
+        <form>
+            <div class="mb-3">
+                <label for="input" class="form-label">What burger do you want to eat?</label>
+                <input type="input" class="form-control submit" id="text" aria-describedby="input">
+                <br>
+                <button id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <p class="burgerHeading">Wanna Eat</p>
         </div>
-    </form>
+
+        <div class="col-6">
+            <p class="burgerHeading">Eaten</p>
+        </div>
+    <div/>
+
+    <div class="row">
+        <div class="col-6">
+            {{#each burgers}}
+            {{#unless devoured}}
+            <p class="wannaEat burgerBox">{{burger_name}}</p>
+            <button id="{{this.id}}">Eat!</button>
+            {{/unless}}
+            {{/each}}
+        </div>
+
+        <div class="col-6">
+            {{#each burgers}}
+            {{#if devoured}}
+            <p class="eaten burgerBox">{{burger_name}}</p>
+            {{/if}}
+            {{/each}}
+        </div>
+    <div/>
 </div>
-
-<div class="row">
-    <div class="col-6">
-        <p class="burgerHeading">Wanna Eat</p>
-    </div>
-
-    <div class="col-6">
-        <p class="burgerHeading">Eaten</p>
-    </div>
-<div/>
-
-<div class="row">
-    <div class="col-6">
-        {{#each burgers}}
-        {{#unless devoured}}
-        <p class="wannaEat burgerBox">{{burger_name}}</p>
-        <button id="{{this.id}}">Eat!</button>
-        {{/unless}}
-        {{/each}}
-    </div>
-
-    <div class="col-6">
-        {{#each burgers}}
-        {{#if devoured}}
-        <p class="eaten burgerBox">{{burger_name}}</p>
-        {{/if}}
-        {{/each}}
-    </div>
-<div/>
