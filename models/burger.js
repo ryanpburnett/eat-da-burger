@@ -10,7 +10,12 @@ var burger = {
     orm.insertOne(burgName, function(res) {
       cb(res);
     })
-  }
+  },
+  updateOne: function (burgStatus, burgId, cb) {
+		orm.updateOne(burgStatus, burgId, function (res) {
+			cb(res);
+		});
+	}
 };
 
 // Export the database functions for the controller (burgerController.js).

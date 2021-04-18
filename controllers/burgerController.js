@@ -17,4 +17,10 @@ router.post("/api/burgers", function(req, res) {
   });
 });
 
+router.put("/api/burgers/:id", function(req, res) {
+  burger.update(req.body.devoured, req.params.id, function(data) {
+    res.status(200).end();
+  });
+});
+
 module.exports = router;
