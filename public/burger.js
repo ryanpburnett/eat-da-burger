@@ -13,11 +13,11 @@ $(function() {
     });	
 
     $(".eatIt").on("click", function() {
-        var id = $(this).data("id");
+        var id = $(this).attr("id");
         $.ajax("/api/burgers/" + id, {
             method: "PUT",
             data: {
-            devoured: true
+            devoured: 1
         }
         }).then(function() {
         location.reload();
